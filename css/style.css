@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0; /* Adding a background color for better visibility */
+}
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.fanimg {
+    width: 100%;
+    max-width: 450px;
+    z-index: 800;
+}
+
+.fanimg img {
+    width: 100%;
+    height: auto;
+    animation: anit infinite linear;
+    animation-delay: 500ms;
+}
+
+@keyframes anit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fanlogic {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    z-index: 999;
+}
+
+.fanlogic button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: burlywood;
+    cursor: pointer;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fanlogic button:nth-child(1) {
+    background-color: rgba(94, 255, 0, 0.877);
+    color: rgb(0, 0, 0);
+}
+
+.fanlogic button:nth-child(2) {
+    background-color: rgba(255, 0, 0, 0.877);
+    color: whitesmoke;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+@media (max-width: 400px) {
+    .fanlogic {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .fanlogic button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .Main {
+        padding: 10px;
+    }
+
+}
